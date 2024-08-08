@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card-body">
+	<h1 style="color: whitesmoke;">Air Quality Index Prediction</h1>
+	<hr>
+	<div class="row" style="justify-content: center;">
+		<div class="col-md-10 main px-4">
+			<h3 class="card-title">Enter the feature values for prediction</h3>
+			<h5 class="text-danger">Please enter input in integers and floats only.</h5>
+			<hr>
+			<form action="{{ url_for('predict')}}" method="POST">
+				<div class="form-group">
+					<label for="T">T</label>
+					<input type="number" name="T" step="0.01" class="form-control" id="T"
+						placeholder="Average Temperature (Celcius)" required>
+				</div>
+				<div class="form-group">
+					<label for="TM">TM</label>
+					<input type="number" name="TM" step="0.01" class="form-control" id="TM"
+						placeholder="Maximum Temperature (Celcius)" required>
+				</div>
+				<div class="form-group">
+					<label for="Tm">Tm</label>
+					<input type="number" name="Tm" step="0.01" class="form-control" id="Tm"
+						placeholder="Minimum Temperature (Celcius)" required>
+				</div>
+				<div class="form-group">
+					<label for="SLP">SO2</label>
+					<input type="number" name="SLP" step="0.01" class="form-control" id="SLP"
+						placeholder="Sulfur Dioxide" required>
+				</div>
+				<div class="form-group">
+					<label for="H">NO2</label>
+					<input type="number" name="H" step="0.01" class="form-control" id="H" placeholder="Nitrogen Dioxide"
+						required>
+				</div>
+				<div class="form-group">
+					<label for="VV">RSPM</label>
+					<input type="number" name="VV" step="0.01" class="form-control" id="VV"
+						placeholder="Respirable Suspended Particulate Matter" required>
+				</div>
+				<div class="form-group">
+					<label for="V">SPM</label>
+					<input type="number" name="V" step="0.01" class="form-control" id="V"
+						placeholder="Suspended Particulate Matter" required>
+				</div>
+				<div class="form-group">
+					<label for="VM">Maximum sustained wind speed</label>
+					<input type="number" name="VM" step="0.01" class="form-control" id="VM"
+						placeholder="Maximum sustained wind speed (Km/h)" required>
+				</div>
+				<input type="submit" class="btn btn-primary btn-lg mt-2" value="Predict">
+				<input type="reset" class="btn btn-info btn-lg mt-2" value="Reset">
+			</form>
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %}

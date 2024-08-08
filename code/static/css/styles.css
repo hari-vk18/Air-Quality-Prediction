@@ -1,0 +1,64 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-image: url(../images/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 100%;
+	background-position: center;
+	height: 100%;
+	font-family: Merriweather, Arial, Helvetica, sans-serif;
+}
+
+html {
+	height: 100%;
+}
+
+label {
+	font-size: large;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.glass-container {
+	background: rgba(255, 255, 255, 0.15);
+	-webkit-backdrop-filter: blur(10px);
+	/* WebKit prefix */
+	backdrop-filter: blur(10px);
+	/* Standard syntax */
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+
+.main {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 15px 15px;
+}
+
+a {
+	font-size: 1.8rem;
+}
+
+form {
+	background-color: s;
+}
+
+.box-with-shadow {
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+	/* Adjust the values as needed */
+}
+
+.main2 {
+	border-radius: 2rem;
+}
+
+.img {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 2rem 0 0 2rem;
+}

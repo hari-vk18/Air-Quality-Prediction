@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AQI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+	<header class="p-2 bg-info text-light sticky-top">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h1>Wellcome...!</h1>
+			</div>
+			<div class="col-12 col-md-6 mt-2 d-flex justify-content-start justify-content-md-end">
+				<nav>
+					<ul class="list-inline">
+						<li class="list-inline-item"><a class="text-white text-decoration-none "
+								href="{{ url_for('home') }}">Home</a>
+						</li>
+						<li class="list-inline-item"><a class="text-white text-decoration-none"
+								href="{{ url_for('plot') }}">Chart</a>
+						</li>
+						<li class="list-inline-item"><a class="text-white text-decoration-none"
+								href="/feedback">Feedback</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="container mt-4 col-12">
+		<div class="card text-center mb-4  glass-container col-md-6">
+			{% block content %}
+			{% endblock content %}
+
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

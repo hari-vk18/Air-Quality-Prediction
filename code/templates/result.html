@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2 style="color: whitesmoke;">Air Quailty Index</h2>
+<ul class="list-group list-group-flush">
+	{% for item in prediction %}
+	<li style="font-size:22px;" class="list-group-item rounded">{{ "%.3f"|format(item) }}</li>
+	{% endfor %}
+
+</ul>
+<br>
+<h3 style="color: whitesmoke;">Prediction:</h3>
+<li style="font-size:22px;" class="list-group-item rounded">{{t}}</li>
+<div class="my-3">
+	<form action="{{ url_for('home') }}">
+		<input class="btn btn-info btn-lg" type="submit" value="Make Another Prediction">
+	</form>
+</div>
+{% endblock content %}

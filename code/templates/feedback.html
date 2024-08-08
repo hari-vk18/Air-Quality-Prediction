@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card-body">
+    <h1 style="color: whitesmoke;">Feedback Form</h1>
+    <div class="container my-5 bg-info py-3 col-md-11 main px-5">
+        <form method="post" action="/submit_feedback">
+            <div class="row">
+                <div class="form-group col-md-6 mb-2">
+                    <label for="name" class="h4 text-white">Name:</label>
+                    <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Name"
+                        required>
+                </div>
+                <div class="form-group col-md-6 mb-2">
+                    <label for="email" class="h4 text-white">Email:</label>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email"
+                        required>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="message" class="h4 text-white">Message:</label>
+                <textarea class="form-control form-control-lg fixed-size-textarea" id="message" name="message" rows="4"
+                    style="resize: none; height: 200px; width: 100%;" placeholder="Send Message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}
